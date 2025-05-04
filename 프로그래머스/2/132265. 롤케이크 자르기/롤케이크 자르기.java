@@ -15,7 +15,7 @@ class Solution {
             cheolCake.put(topping[i], broCake.getOrDefault(topping[i], 0) + 1);
             
             if(broCake.get(topping[i]) == 1) {
-                Integer rm = broCake.remove(topping[i]);
+                broCake.remove(topping[i]);
             } else {
                 broCake.put(topping[i], broCake.getOrDefault(topping[i], 0) - 1);
             }
