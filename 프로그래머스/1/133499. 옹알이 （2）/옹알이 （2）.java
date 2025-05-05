@@ -7,10 +7,7 @@ class Solution {
                 
             String target = b;
             while(target.contains("aya") || target.contains("ye") || target.contains("woo") || target.contains("ma")) {
-                target = target.replace("aya", " ");
-                target = target.replace("ye", " ");
-                target = target.replace("woo", " ");
-                target = target.replace("ma", " ");
+                target = target.replaceAll("aya|ye|woo|ma", " ");
             }
             
             if(target.trim().length() == 0) answer++;
