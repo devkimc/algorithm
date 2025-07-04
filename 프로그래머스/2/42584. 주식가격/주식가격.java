@@ -22,8 +22,7 @@ class Solution {
 
         while (!stack.isEmpty()) {
             // 결과값의 인덱스 값 = 전체 길이 - 스택의 인덱스 값
-            answer[stack.peek()] = prices.length - stack.peek() -1;
-            stack.pop();
+            answer[stack.peek()] = prices.length - stack.pop() -1;
         }
         
         return answer;
