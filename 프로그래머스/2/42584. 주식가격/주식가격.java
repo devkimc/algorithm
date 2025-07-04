@@ -5,23 +5,20 @@ class Solution {
         int[] answer = new int[prices.length];
         Stack<Integer> stack = new Stack<>();
 
-        // 스택에 마지막 인덱스 추가
         stack.push(0);
 
-        // 반복문 (주가 배열의 마지막 인덱스 - 1 부터 감소)
         for (int i = 1; i < prices.length ; i++) {
 
-            // 반복문 2 (while 조건: 스택 존재 && 스택의 top의 값 > 인덱스의 값)
+            // 반복문 (스택의 top의 값 > 인덱스의 값)
             while (!stack.isEmpty() && prices[stack.peek()] > prices[i]) {
                 answer[stack.peek()] = i - stack.pop();
             }
 
-            // 스택에 추가한다.
             stack.push(i);
         }
 
+        // 가격이 떨어진 적이 없는 가격에 대한 결과값 설정
         while (!stack.isEmpty()) {
-            // 결과값의 인덱스 값 = 전체 길이 - 스택의 인덱스 값
             answer[stack.peek()] = prices.length - stack.pop() -1;
         }
         
