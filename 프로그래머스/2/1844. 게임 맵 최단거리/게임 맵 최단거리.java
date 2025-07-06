@@ -17,6 +17,8 @@ class Solution {
         
         // 모든 경로를 탐색 후 목적지 [4][4] 에 방문하지 못했을 경우 -1 return
         // 궁금증: queue 대신 stack 으로 풀면 안되는 건가?
+        // 답: stack 으로 풀면 dfs 처럼 깊이 탐색이 된다. 
+        // 공평하게 한단계 씩 내려가는 것이 너비 탐색인데, 스택으로 풀면 잘못된 경로가 있어도 쭉 while 문을 반복해서 최단 경로를 구하지 않는다.
         
         int answer = 0;
         boolean[][] visited = new boolean[maps.length][maps[0].length];
