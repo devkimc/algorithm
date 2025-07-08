@@ -9,7 +9,7 @@ class Solution {
         for (int k = 0; k < 4; k++) {
           if (j != k) max = Math.max(max, land[i-1][k]);
         }
-        land[i][j] = land[i][j] + max;
+        land[i][j] += max;
       }
     }
 
