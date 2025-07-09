@@ -41,15 +41,6 @@ class Solution {
       answer += stack.pop();
     }
 
-    // 문자열 세트 수만큼 Loop
-    // 스타상인 경우, 스택에 데이터가 존재하는지 확인하는지 확인
-    // 존재할 경우
-    // stack.add (stack.pop * 2)
-    //
-    // 현재값에 대해 연산한다.
-    // 스택에 연산한 값을 추가한다.
-    //String[0] // 점수
-    //String[1] // 옵션 (존재하지 않을 수 있음)
     return answer;
   }
 
